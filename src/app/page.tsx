@@ -1,95 +1,105 @@
-import Image from "next/image";
 import styles from "./page.module.css";
+import Header from "@/components/header/Header";
+import Footer from "@/components/footer/Footer";
+import CardSection from "@/components/card-section/Card-Section";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
+    <>
+      <Header pokemon="Squirtle" />
+      <main className={styles.main}>
+        <CardSection title="Informações sobre Squirtle">
+          <div>
+            <img
+              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png"
+              alt="Squirtle 1"
             />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
+            <img
+              src="https://archives.bulbagarden.net/media/upload/thumb/7/79/Squirtle_SSBU.png/200px-Squirtle_SSBU.png"
+              alt="Squirtle 2"
+            />
+          </div>
           <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+            Squirtle é um Pokémon do tipo Água. É o Pokémon inicial da região de
+            Kanto e evolui para Wartortle.
           </p>
-        </a>
-      </div>
-    </main>
+        </CardSection>
+
+        <CardSection title="Curiosidades">
+          <ul>
+            <li>Squirtle é um dos Pokémon mais populares e adoráveis.</li>
+            <li>
+              Seu nome deriva das palavras "squirrel" (esquilo) e "turtle"
+              (tartaruga).
+            </li>
+            <li>
+              Squirtle é frequentemente escolhido por treinadores para começar
+              sua jornada Pokémon.
+            </li>
+          </ul>
+        </CardSection>
+        <CardSection title="Recursos Adicionais">
+          <ul>
+            <li>
+              <a
+                href="https://www.pokemon.com/br/pokedex/squirtle"
+                target="_blank"
+              >
+                Pokédex - Squirtle
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://bulbapedia.bulbagarden.net/wiki/Squirtle_(Pok%C3%A9mon)"
+                target="_blank"
+              >
+                Bulbapedia - Squirtle
+              </a>
+            </li>
+          </ul>
+        </CardSection>
+        <CardSection title="Evoluções">
+          <ul>
+            <li>
+              <a href="./pages/pokemon/index.html?name=squirtle">
+                <figure>
+                  <img
+                    src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/007.png"
+                    alt="Squirtle"
+                  />
+                  <figcaption>1. Squirtle</figcaption>
+                </figure>
+              </a>
+            </li>
+
+            <li>
+              <a href="./pages/pokemon/index.html?name=wartortle">
+                <figure>
+                  <img
+                    src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/008.png"
+                    alt="Wartortle"
+                  />
+                  <figcaption>2. Wartortle</figcaption>
+                </figure>
+              </a>
+            </li>
+
+            <li>
+              <a href="./pages/pokemon/index.html?name=blastoise">
+                <figure>
+                  <img
+                    src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/009.png"
+                    alt="Blastoise"
+                  />
+                  <figcaption>3. Blastoise</figcaption>
+                </figure>
+              </a>
+            </li>
+          </ul>
+        </CardSection>
+        <CardSection></CardSection>
+      </main>
+      <Footer />
+    </>
   );
 }
