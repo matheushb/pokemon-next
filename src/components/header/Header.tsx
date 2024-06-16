@@ -1,4 +1,4 @@
-import styles from "./Header.module.css";
+import styles from "@/components/header/header.module.css";
 
 function Header(props: { pokemon: string }) {
   return (
