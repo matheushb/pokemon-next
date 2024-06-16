@@ -97,7 +97,6 @@ export default function Home() {
             </li>
           </ul>
         </CardSection>
-        <CardSection></CardSection>
       </main>
       <Footer />
     </>
